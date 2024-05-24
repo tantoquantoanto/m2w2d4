@@ -43,10 +43,10 @@ const amy = {
 const prices = [34, 5, 2]
 const shippingCost = 50
 let utenteCheEffettuaLAcquisto = amy //cambia il valore qui per provare se il tuo algoritmo funziona!
-
+users.push(marco, paul, amy);
 
 for(let i = 0; i < users.length; i++) {
-  users.push(marco, paul, amy);
+  
 
   if(users[i].isAmbassador === false) {
     console.log(users[i].name, users[i].lastName, "non è un ambassador")
