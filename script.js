@@ -92,4 +92,116 @@ console.log(findTheTotal(prices, utenteCheEffettuaLAcquisto, shippingCost))
 
   
   
+
+
+
+
+// Esercizio 1: Trova il numero più grande
+// Descrizione: Scrivi una funzione maxNumber che prende in input un ARRAY di numeri e restituisce il 
+// numero più grande nell'array.
+
+// es: maxNumber([1, 2, 3, 4, 5]); // -> l'output dovrebbe essere 5
+let numbers = [1,5,8,12,4,3]
+let maxValue = numbers[0]; 
+function maxNumber(numbers) {
+  for(let i = 0; i < numbers.length; i++) {
+    if(numbers[i] > maxValue) {
+      maxValue = numbers[i];
+    }
+  } return maxValue
+
+} console.log(maxNumber(numbers))
+
+
+
+/*
+Esercizio 2: Palindromo
+Descrizione: Scrivi una funzione isPalindrome che prende in input una stringa e restituisce true se la stringa è un palindromo (si legge uguale da entrambi i lati) e false altrimenti.
+*/
+
+/*
+isPalindrome("anna"); // true
+isPalindrome("hello"); // false
+*/
+
+// suggerimento: metodi delle stringhe e degli array ti torneranno utili come ad esempio il metodo 
+// reverse() (googlalo su MDN)
+let words = "anna";
+let reversedWords = "";
+function isPalindrome(words) {
+  for(let i = words.length - 1; i >= 0; i--) {
+    reversedWords += words[i]
+    }
+    return reversedWords === words
+
+   
+
+    }
+  
+  
+
+ 
+console.log(isPalindrome(words))
+
+
+
+
+/*
+Esercizio 4: Somma di numeri pari
+Descrizione: Scrivi una funzione sumEvenNumbers che prende in input un array di numeri e restituisce la somma di tutti i numeri pari nell'array.
+
+sumEvenNumbers([10, 20, 30, 40]); // 100
+*/
+
+let arrayNumbers = [10, 20, 30, 40];
+let sum = 0;
+function sumEvenNumbers(arrayNumbers) {
+  for(let i = 0; i < arrayNumbers.length; i++) {
+    if(arrayNumbers[i] % 2 === 0) {
+      sum += arrayNumbers[i];
+
+    } 
+  } return sum
+
+} console.log(sumEvenNumbers(arrayNumbers))
+
+/*
+Esercizio 5: Rimuovi duplicati
+Descrizione: Scrivi una funzione removeDuplicates che prende in input un array di numeri e restituisce un nuovo array senza duplicati.
+
+suggerimento... includes() potrebbe essere il metodo che fa per te...o forse no?  
+
+es: removeDuplicates([1, 2, 2, 3, 4, 4, 5]); // [1, 2, 3, 4, 5]
+*/
+let arrayNumbers2 = [1, 2, 2, 3, 4, 4, 5];
+let newArray = [];
+function removeDuplicates(arrayNumbers2) {
+  for(let i = 0; i < arrayNumbers2.length; i++)
+    if (!newArray.includes(arrayNumbers2[i])) {
+      newArray.push(arrayNumbers2[i])
+    }
+    return newArray
+  
+}
+console.log(removeDuplicates(arrayNumbers2))
+
+/*
+Esercizio 7: Contare vocali
+Descrizione: Scrivi una funzione countVowels che prende in input una stringa e restituisce il numero di vocali presenti nella stringa.
+
+countVowels("javascript"); // 3
+*/
+ let word = "javascript";
+ 
+ 
+function countVowels(word) {
+  let contatore = 0;
+  let vowels = "aeiou";
+  for(let i = 0; i < word.length; i++) {
+    if(vowels.includes(word[i])) {
+      contatore++;
+    }
+  } return contatore
+  
+} console.log(countVowels(word))
   
