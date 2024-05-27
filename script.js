@@ -20,7 +20,10 @@ Infine, crea un SECONDO array in cui inserirai SOLO gli ambassador.
 
 const ambassadors = [];
 const notAmbassadors = [];
-const users = []
+const users = [];
+let cart = 0;
+
+
 
 const marco = {
   name: "Marco",
@@ -40,9 +43,9 @@ const amy = {
   isAmbassador: false,
 }
 
-const prices = [34, 5, 2]
+const prices = [34, 25, 2]
 const shippingCost = 50
-let utenteCheEffettuaLAcquisto = amy //cambia il valore qui per provare se il tuo algoritmo funziona!
+let utenteCheEffettuaLAcquisto = marco //cambia il valore qui per provare se il tuo algoritmo funziona!
 users.push(marco, paul, amy);
 
 for(let i = 0; i < users.length; i++) {
@@ -66,7 +69,27 @@ console.log(users)
 console.log(ambassadors)
 console.log(notAmbassadors)
 
+function findTheTotal(prices, utenteCheEffettuaLAcquisto, shippingCost) {
+
+ 
+ for(let i = 0; i< prices.length; i++) {
+  cart += prices[i];
   
+}
+if(utenteCheEffettuaLAcquisto.isAmbassador) {
+cart = cart * 0.7;
+} 
+if(cart > 100) {
+  shippingCost = 0
+  console.log("hai diritto alla spedizione gratuita")
+} else {
+  cart = cart + shippingCost;
+}
+return cart
+
+}
+console.log(findTheTotal(prices, utenteCheEffettuaLAcquisto, shippingCost))
+
   
   
   
